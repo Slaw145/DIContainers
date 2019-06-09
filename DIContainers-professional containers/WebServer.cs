@@ -93,7 +93,7 @@ namespace DIContainers
 
             //-----Autofac---------
             var builder = new ContainerBuilder();
-            builder.Register(c => new LoginValidator()).As<ILoginValidator>();
+            builder.RegisterType<LoginValidator>().As<ILoginValidator>();
             builder.RegisterType<PasswordValidator>().As<IPasswordValidator>();
             builder.RegisterType<CharacterSkillPoints>().As<ICharacterSkillPoints>();
 
